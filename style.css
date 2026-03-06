@@ -208,11 +208,11 @@
         .cta-message {
             background: rgba(198, 40, 40, 0.15);
             border: 1px dashed #c62828;
-            border-radius: 60px;
+            border-radius: 80px;
             padding: 1.5rem;
             margin: 3rem 0;
             text-align: center;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-style: italic;
             backdrop-filter: blur(4px);
         }
@@ -369,7 +369,7 @@
 
         .footer-dev i {
             color: #c62828;
-            font-size: 1.5rem;
+            font-size: 1.0rem;
         }
 
         /* responsividade */
