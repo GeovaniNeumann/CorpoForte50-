@@ -377,10 +377,11 @@ h2::before {
     border-color: #fff;
 }
 
+/* CTA MESSAGE */
 .cta-message {
     background: rgba(20, 20, 20, 0.8);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(198, 40, 40, 0.3);
+    border: 1px solid transparent;
     border-radius: 80px;
     padding: 1.5rem;
     margin: 3rem 0;
@@ -406,10 +407,8 @@ h2::before {
     animation: rotateBorder 4s linear infinite;
 }
 
-@keyframes rotateBorder {
-    0% { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(360deg); }
-}
+
+
 
 .cta-message::after {
     content: '';
@@ -423,10 +422,18 @@ h2::before {
     z-index: -1;
 }
 
+.cta-message i {
+    color: #c62828;
+    margin-right: 10px;
+    font-size: 1.3rem;
+    vertical-align: middle;
+}
+
 .cta-message strong {
     color: #c62828;
     font-weight: 700;
     text-shadow: 0 0 10px rgba(198, 40, 40, 0.5);
+    margin-right: 5px;
 }
 
 /* Depoimentos com design premium */
@@ -843,21 +850,33 @@ footer::after {
         gap: 1.5rem;
     }
     
-    /* CTA MESSAGE - CORRIGIDO PARA TABLETS */
+    /* CTA MESSAGE - TABLETS */
     .cta-message { 
         border-radius: 40px; 
-        font-size: 1rem; 
+        font-size: 1.2rem; 
         padding: 1.2rem 1.5rem;
         margin: 2rem 0;
         line-height: 1.5;
         word-wrap: break-word;
         word-break: break-word;
+        text-align: center;
     }
     
     .cta-message i {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         margin-right: 8px;
         vertical-align: middle;
+    }
+    
+    .cta-message strong {
+        font-size: 1.2rem;
+        display: inline-block;
+        margin-right: 5px;
+    }
+    
+    .cta-message span {
+        display: inline;
+        font-size: 1.1rem;
     }
     
     .testimonial {
@@ -919,7 +938,7 @@ footer::after {
 /* Celulares grandes (480px - 767px) */
 @media (max-width: 480px) {
     html {
-        font-size: 14px;
+        font-size: 16px;
     }
     
     .container {
@@ -962,37 +981,38 @@ footer::after {
         align-items: center;
     }
     
-    /* CTA MESSAGE - CORRIGIDO PARA CELULARES */
+    /* CTA MESSAGE - CELULARES GRANDES - CORRIGIDO */
     .cta-message { 
         border-radius: 25px; 
-        font-size: 0.9rem; 
-        padding: 1rem 1.2rem;
+        font-size: 1.1rem; 
+        padding: 1.2rem 1rem;
         margin: 1.5rem 0;
-        line-height: 1.5;
+        line-height: 1.6;
+        text-align: center;
+        display: block;
         word-wrap: break-word;
         word-break: break-word;
-        text-align: left;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        gap: 6px;
     }
     
     .cta-message i {
-        font-size: 1rem;
-        margin-right: 6px;
-        margin-top: 2px;
-        flex-shrink: 0;
+        display: inline-block;
+        font-size: 1.3rem;
+        margin-right: 8px;
+        vertical-align: middle;
     }
     
     .cta-message strong {
-        flex-shrink: 0;
-        margin-right: 4px;
+        display: inline-block;
+        color: #c62828;
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-right: 5px;
+        vertical-align: middle;
     }
     
-    .cta-message .cta-text {
-        flex: 1;
-        min-width: 180px;
+    .cta-message span {
+        display: inline;
+        font-size: 1.1rem;
     }
     
     .benefits-grid {
@@ -1081,6 +1101,10 @@ footer::after {
 
 /* Celulares muito pequenos (até 360px) */
 @media (max-width: 360px) {
+    html {
+        font-size: 15px;
+    }
+    
     .hero h1 { 
         font-size: 1.2rem; 
     }
@@ -1103,24 +1127,30 @@ footer::after {
         max-width: 150px;
     }
     
-    /* CTA MESSAGE - CORRIGIDO PARA CELULARES MUITO PEQUENOS */
+    /* CTA MESSAGE - CELULARES MUITO PEQUENOS */
     .cta-message {
-        font-size: 0.8rem;
-        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        padding: 1rem 0.8rem;
         border-radius: 20px;
-        flex-direction: column;
-        align-items: center;
         text-align: center;
-        gap: 6px;
     }
     
     .cta-message i {
-        margin-right: 0;
-        margin-bottom: 2px;
+        display: inline-block;
+        font-size: 1.2rem;
+        margin-right: 6px;
+        vertical-align: middle;
     }
     
-    .cta-message .cta-text {
-        min-width: auto;
+    .cta-message strong {
+        display: inline-block;
+        font-size: 1rem;
+        margin-right: 4px;
+    }
+    
+    .cta-message span {
+        display: inline;
+        font-size: 0.95rem;
     }
     
     .testimonial-text {
